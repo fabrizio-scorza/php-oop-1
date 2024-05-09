@@ -43,11 +43,29 @@ $acquaman = new Production('Acquaman', 'en', '6');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Production</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
-
+    <main>
+        <div class="p-3 mt-5 container">
+            <div class="row row-cols-4">
+                <div class="col">
+                    <div class="card text-center">
+                        <h2><?php echo $x_man->title ?></h2>
+                        <p>
+                            <span>
+                                <?php echo $x_man->lang ?>
+                            </span>
+                            <span>
+                                <?php echo $x_man->vote ?>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
