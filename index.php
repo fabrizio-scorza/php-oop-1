@@ -32,6 +32,9 @@ include __DIR__ . '/db.php';
                                     <?php echo $film->vote ?>
                                 </span>
                             </p>
+                            <p>
+                                <?php echo $film->genre->name ?>
+                            </p>
                         </div>
                     </div>
                 <?php

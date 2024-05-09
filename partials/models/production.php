@@ -6,13 +6,15 @@ class Production
     public $title;
     public $lang;
     public $vote;
+    public $genre;
 
     // costruttore
-    function __construct(string $_title, string $_lang, int $_vote)
+    function __construct(string $_title, string $_lang, int $_vote, Genre $_genre)
     {
         $this->title = $_title;
         $this->lang = $_lang;
         $this->setVote($_vote);
+        $this->genre = $_genre;
     }
 
     // metodi
