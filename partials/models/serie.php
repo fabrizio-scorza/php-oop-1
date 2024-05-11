@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/models/production.php';
+require_once __DIR__ . '/production.php';
 require_once __DIR__ . '/genre.php';
 
 class Serie extends Production

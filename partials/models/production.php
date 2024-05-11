@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/genre.php';
+
 // dichiaro la classe Production con le sue variabili i metodi e il costruttore
 class Production
 {

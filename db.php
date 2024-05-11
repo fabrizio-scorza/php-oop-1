@@ -1,7 +1,8 @@
 <?php
-require_once __DIR__ . '/partials/models/production.php';
-require_once __DIR__ . '/partials/models/genre.php';
-
+require_once __DIR__ . '/partials/models/Genre.php';
+require_once  __DIR__ . '/partials/models/Production.php';
+require_once __DIR__ . '/partials/models/Film.php';
+require_once  __DIR__ . '/partials/models/Serie.php';
 
 $genres = [
     $avventura = new Genre('Avventura', 'trama veloce ricca di suspance e adrenalina'),
@@ -10,13 +11,13 @@ $genres = [
 ];
 
 
-$films = [
-    new Production('X Man', 'en', '8', $avventura),
-    new Production('Acquaman', 'en', '6', $azione),
-    new Production('Avengers', 'en', '10', $avventura),
-    new Production('Cat Woman', 'fr', '1', $azione),
-    new Production('Batman', 'en', '5', $commedia),
-    new Production('Geeg Robot', 'it', '2', $azione),
-    new Production('Spiderman', 'en', '7', $commedia),
-    new Production('Ant-Man', 'en', '5', $avventura)
+$productions = [
+    new Film('X Man', 'en', '8', $avventura, '150.000$', '75'),
+    new Film('Acquaman', 'en', '6', $azione, '105.000$', '68'),
+    new Film('Avengers', 'en', '10', $avventura, '250.000$', '90'),
+    new Film('Cat Woman', 'fr', '1', $azione, '50.000$', '63'),
+    new Serie('Batman', 'en', '5', $commedia, '6'),
+    new Serie('Geeg Robot', 'it', '2', $azione, '1'),
+    new Serie('Spiderman', 'en', '7', $commedia, '8'),
+    new Serie('Ant-Man', 'en', '5', $avventura, '4')
 ];

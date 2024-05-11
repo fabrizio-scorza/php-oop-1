@@ -19,22 +19,53 @@ include __DIR__ . '/db.php';
         <div class="p-3 mt-5 container">
             <div class="row row-cols-4 gy-3">
                 <?php
-                foreach ($films as $film) {
+                foreach ($productions as $production) {
                 ?>
                     <div class="col">
                         <div class="card text-center">
-                            <h2><?php echo $film->title ?></h2>
+                            <h2><?php echo $production->title ?></h2>
                             <p>
                                 <span>
-                                    <?php echo $film->lang ?>
+                                    Lingua:
+                                    <?php echo strtoupper($production->lang) ?>
                                 </span>
                                 <span>
-                                    <?php echo $film->vote ?>
+                                    Voto:
+                                    <?php echo $production->vote ?>
                                 </span>
                             </p>
                             <p>
-                                <?php echo $film->genre->name ?>
+                                <span> Generi:</span>
+                                <?php echo $production->genre->name ?>
                             </p>
+                            <div>
+                                <?php
+                                if (isset($production->profits)) {
+                                ?>
+                                    <p>
+                                        Durata:
+                                        <?php
+                                        echo $production->time;
+                                        ?>
+                                        min
+                                    </p>
+                                    <p>
+                                        <?php
+                                        echo 'Incassi: ' . $production->profits;
+                                        ?>
+                                    </p>
+                                <?php
+                                } else {
+                                ?>
+                                    <p>
+                                        <?php
+                                        echo 'Numero di stagioni: ' . $production->number_of_season;
+                                        ?>
+                                    </p>
+                                <?php
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                 <?php
