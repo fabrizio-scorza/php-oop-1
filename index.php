@@ -40,7 +40,7 @@ include __DIR__ . '/db.php';
                             </p>
                             <div>
                                 <?php
-                                if (isset($production->profits)) {
+                                if ($production instanceof Film) { //instanceof
                                 ?>
                                     <p>
                                         Durata:
